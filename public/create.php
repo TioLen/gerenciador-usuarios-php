@@ -1,3 +1,4 @@
+<!-- CREATE -->
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,6 +11,14 @@
 
 <body>
     <div class="container mt-5">
+        <!-- 
+        html              |     UserController
+        ---------------------------------------------------
+        name="action" ----- >   action
+        value="create"  --- >   'create'
+        method='POST'   --- >   'REQUEST_METHOD' === 'POST'
+        
+        -->
         <h2>Cadastrar Novo Usuário</h2>
         <form action="../src/Controller/UserController.php" method="POST">
             <input type="hidden" name="action" value="create">

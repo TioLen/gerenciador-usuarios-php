@@ -2,10 +2,11 @@
 require_once __DIR__ . '/../../config/database.php';
 require_once __DIR__ . '/../DTO/UserDTO.php';
 use App\DTO\UserDTO;
+
 if (
     $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) &&
     $_POST['action'] === 'create'
-) {
+){
     $name = $_POST['name'] ?? '';
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
