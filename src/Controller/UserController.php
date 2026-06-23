@@ -32,13 +32,12 @@ if (
         $userDTO->password
     );
     if ($stmt->execute()) {
-        header('Location: ../../public/list.php?success=Usuário cadastrado
-com sucesso!');
-    } else {
-        header(
-            'Location: ../../public/create.php?error=Erro ao cadastrar usuário: ' . $stmt->error
-        );
-    }
+    header('Location: ../../public/list.php?success=Usuário cadastrado com sucesso!');
+    exit(); // É sempre bom colocar um exit() logo após o redirecionamento
+} else {
+    header('Location: ../../public/create.php?error=Erro ao cadastrar usuário: ' . $stmt->error);
+    exit();
+}
     $stmt->close();
     $conn->close();
     exit();
