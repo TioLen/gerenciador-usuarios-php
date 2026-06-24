@@ -5,6 +5,7 @@ require_once __DIR__ . '/../src/DTO/UserDTO.php';
 use App\DTO\UserDTO;
 
 $userToEdit = null;
+
 if (isset($_GET['id'])) {
     // cria variaveis locais para manipular o 'id' recebido e 
     // no final editar os dados solicitados.
@@ -15,7 +16,7 @@ if (isset($_GET['id'])) {
 
     $result = $stmt->get_result();
 
-    if ($result->$num_rows === 1) {
+    if ($result->num_rows === 1) {
         $row = $result->fetch_assoc();
         $userToEdit = new UserDTO($row['id'], $row['name'], $row['email'], '');
     }
@@ -64,7 +65,8 @@ if (!$userToEdit) {
 
 
             <button type="submit" class="btn btn-primary">Atualizar</button>
-
+        </form>
+    </div>
 
 </body>
 
