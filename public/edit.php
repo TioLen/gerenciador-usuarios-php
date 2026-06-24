@@ -1,7 +1,7 @@
 <!-- UPDATE -->
 <?php
-require_once __DIR__ . '/../../config/database.php';
-require_once __DIR__ . '/../DTO/UserDTO.php';
+require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../src/DTO/UserDTO.php';
 use App\DTO\UserDTO;
 
 $userToEdit = null;
